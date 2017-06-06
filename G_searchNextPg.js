@@ -1,3 +1,4 @@
+//script checks page URL and adds next page to URL. This is  only for Google searches. 
 var first = '&start=10';
 var addon = '&start=';
 var regPrime = /&start=(\d+)/g;
