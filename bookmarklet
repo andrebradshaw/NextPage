@@ -1,0 +1,2 @@
+//bookmarklet for paging though Google search results.
+javascript:(function()%7Bvar first %3D '%26start%3D10'%3Bvar addon %3D '%26start%3D'%3Bvar regPrime %3D %2F%26start%3D(%5Cd%2B)%2Fg%3Bvar url %3D window.location.href%3Bvar str%3Bwhile ((str %3D regPrime.exec(url)) !%3D%3D null) %7Bvar numInt %3D parseInt(str%5B1%5D)%3Bvar next %3D numInt%2B10%3B%7Dif (next %3D%3D null) %7Bvar%09newURL %3D window.location.href %2B first%3B%7D else %7Bvar newURL %3D url.replace(%2F%26start%3D%5Cd%2B%2Fg%2C addon %2B next)%3B%7Dwindow.location.href %3D newURL%7D)()
